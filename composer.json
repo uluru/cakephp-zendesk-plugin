@@ -1,0 +1,16 @@
+{
+    "name": "uluru/cakephp-zendesk-plugin",
+    "description" : "CakePHP Zendesk SSO plugin",
+    "type": "cakephp-plugin",
+    "keywords": ["cakephp", "zendesk"],
+    "homepage": "https://github.com/uluru/cakephp-zendesk-plugin",
+    "license": "MIT",
+    "authors": [{
+        "name": "anazawa yasuhiro",
+        "homepage": "http://www.uluru.biz/",
+        "role": "Auhtor"
+    }],
+    "require": {
+        "firebase/php-jwt": "dev-master"
+    }
+}
