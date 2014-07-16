@@ -53,8 +53,9 @@ class SsoController extends ZendeskAppController
 
         $authKeys = am($this->defaultAuthKeys, Configure::read('Zendesk.authKeys'));
         foreach ($authKeys as $tokenKey => $authKey) {
-            if (!empty($this->Auth->user($authKey))) {
-                $token[$tokenKey] = $this->Auth->user($authKey);
+            $token[$tokenKey] = $this->Auth->user($authKey);
+            if (empty($token[$tokenKey])) {
+                unset($token[$tokenKey]);
             }
         }
 
