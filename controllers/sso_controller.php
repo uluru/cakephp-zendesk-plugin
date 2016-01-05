@@ -10,6 +10,9 @@
 
 */
 
+App::import('Vendor', 'autoload');
+use Firebase\JWT\JWT as JWT;
+
 /**
  * sso Controller
  *
@@ -59,7 +62,6 @@ class SsoController extends ZendeskAppController
             }
         }
 
-        App::import('Vendor', 'autoload');
         $jwt = JWT::encode($token, Configure::read('Zendesk.sharedKey'));
 
         // Redirect
